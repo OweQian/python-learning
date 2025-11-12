@@ -1,9 +1,25 @@
-pizza = {
-    "crust": "thick",
-    "toppings": ["mushrooms", "extra cheese"],
-}
+# pizza = {
+#     "crust": "thick",
+#     "toppings": ["mushrooms", "extra cheese"],
+# }
 
-print(f"You ordered a {pizza['crust']}-crust pizza with the following toppings:")
+# print(f"You ordered a {pizza['crust']}-crust pizza with the following toppings:")
 
-for topping in pizza["toppings"]:
-    print(f"- {topping}")
+# for topping in pizza["toppings"]:
+#     print(f"- {topping}")
+
+# def make_pizza(*toppings):
+#    print(f"Making a pizza with the following toppings:")
+#    for topping in toppings:
+#         print(f"- {topping}")
+    
+# make_pizza('pepperoni')
+# make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+def make_pizza(size, *toppings):
+    print(f"Making a {size}-inch pizza with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
